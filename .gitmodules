@@ -1,0 +1,3 @@
+[submodule "src/qr"]
+	path = src/qr
+	url = https://gist.github.com/OLIET2357/577e84f530ace9f8055436d4a650a9ad
