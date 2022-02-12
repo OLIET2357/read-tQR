@@ -18,15 +18,17 @@ def img2txt(img, SIZE):
     return m
 
 
-def m(x):
-    return str(1 - int(x, 2))
-
-
 def check_tqr(q):
     return True
 
 
 def decode_tqr(q):
+    def m(x):
+        return str(1 - int(x, 2))
+
+    if not check_tqr(q):
+        return None
+
     sq = []
     for l in q:
         sq.append(list(map(str, l)))
