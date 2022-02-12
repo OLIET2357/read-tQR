@@ -42,6 +42,53 @@ def img2txt(img, SIZE):
 
 
 def check_tqr(q):
+    cells = [
+        [True, True, True, True, True, True, True, False, None, None,
+            None, None, None, None, None, None, None, True, True],
+        [True, False, False, False, False, False, True, False, None,
+            None, None, None, None, None, None, None, None, None, True],
+        [True, False, True, True, True, False, True, False, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [True, False, True, True, True, False, True, False, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [True, False, True, True, True, False, True, False, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [True, False, False, False, False, False, True, False, None,
+            None, None, None, None, None, None, None, None, None, None],
+        [True, True, True, True, True, True, True, False, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [False, False, False, False, False, False, False, False, None,
+            None, None, None, None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, True, None, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, False, None, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, True, None, None, None,
+            None, None, None, None, None, None, None, None, None],
+        [False, False, False, False, False, False, False, False, None, None,
+            None, False, False, False, False, False, False, False, False],
+        [True, True, True, True, True, True, True, False, True, False,
+            True, False, True, True, True, True, True, True, True],
+        [True, False, False, False, False, False, True, False, None, None,
+            None, False, True, False, False, False, False, False, True],
+        [True, False, True, True, True, False, True, False, None, None,
+            None, False, True, False, True, True, True, False, True],
+        [True, False, True, True, True, False, True, False, None, None,
+            None, False, True, False, True, True, True, False, True],
+        [True, False, True, True, True, False, True, False, None, None,
+            None, False, True, False, True, True, True, False, True],
+        [True, False, False, False, False, False, True, False, None, None,
+            None, False, True, False, False, False, False, False, True],
+        [True, True, True, True, True, True, True, False, None, None,
+            None, False, True, True, True, True, True, True, True],
+    ]
+
+    for i in range(TQR_SIZE):
+        for j in range(TQR_SIZE):
+            if cells[i][j] is not None:
+                if q[i][j] != cells[i][j]:
+                    return False
+
     return True
 
 
